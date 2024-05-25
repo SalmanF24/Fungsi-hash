@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Login Sederhana dengan Hashing</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Program Login Sederhana</h1>
+        <img src="unsur1.png" alt="foto" class="gambar">
+        <img src="unsur1 - Copy.png" alt="foto" class="gambar1">
+        <img src="unsur1 - Copy - Copy.png" alt="foto" class="gambar2">
+        <img src="unsur1 - Copy - Copy - Copy.png" alt="foto" class="gambar3">
+
+        <div id="welcome">
+            <button onclick="showMenu('menu')">Mulai</button>
+            <div class="info">Klik Mulai untuk masuk ke Menu Admin</div>
+        </div>
+
+        <div id="daftar" style="display: none;">
+            <h2>Daftar Akun</h2>
+            <input type="text" id="daftarUsername" placeholder="Username">
+            <br><br>
+            <input type="password" id="daftarPassword" placeholder="Password">
+            <br><br>
+            <input type="submit" onclick="viewDaftar()" value="Daftar">
+            <input type="submit" onclick="showMenu('welcome')" value="Kembali">
+        </div>
+
+        <div id="login" style="display: none;">
+            <h2>Login</h2>
+            <input type="text" id="loginUsername" placeholder="Username">
+            <br><br>
+            <input type="password" id="loginPassword" placeholder="Password">
+            <br><br>
+            <input type="submit" onclick="viewLogin()" value="Login">
+            <input type="submit" onclick="showMenu('welcome')" value="Kembali">
+        </div>
+
+        <div id="menu" style="display: none;">
+            <h2>Menu Admin</h2>
+            <button onclick="showTambahAkun()">Tambah Akun</button>
+            <button onclick="viewHapusAkun()">Hapus Akun</button>
+            <button onclick="showDataAkun()">Lihat Data Akun</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+
+        <div id="dataAkun" style="display: none;">
+            <div id="output"></div>
+            <button onclick="showMenu('menu')">Kembali</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
